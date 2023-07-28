@@ -34,7 +34,7 @@ clf.fit(X_train, y_train)
 # 预测测试集
 predictions = clf.predict(X_test)
 # 计算准确度
-Accuracy_score = accuracy_score(y_test,predictions)
+Accuracy_score = accuracy_score(y_test, predictions)
 print('SVM Accuracy_score:', Accuracy_score)
 # 绘制ROC曲线
 '''fpr, tpr, thresholds = metrics.roc_curve(y_test, predictions)

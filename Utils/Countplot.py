@@ -31,6 +31,6 @@ plt.legend()  # 图例
 plt.xticks(np.arange(len(columns_names)) + bar_width*(len(data)-1)/2, columns_names)  # 标签+位置
 # plt.ylabel('')  # 纵坐标轴标题
 plt.title('不同指标下模型评估对比')
-plt.rcParams['font.sans-serif']=['SimHei']  # 解决标题中文乱码
-plt.rcParams['axes.unicode_minus'] = False
+plt.rcParams['font.sans-serif']=['SimHei']
+plt.rcParams['axes.unicode_minus'] = False  # 解决标题中文乱码
 plt.show()

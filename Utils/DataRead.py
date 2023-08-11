@@ -53,7 +53,7 @@ def generate_data(n_samples, dataset, noise):
             "Data type incorrectly specified. Please choose an existing dataset."
         )
 
-# X, y = generate_data(n_samples=2000, dataset='moons', noise=0.2)
-# X = StandardScaler().fit_transform(X)
+X, y = generate_data(n_samples=2000, dataset='moons', noise=0.2)
+X = StandardScaler().fit_transform(X)
 
-X,y = datasets.load_diabetes(return_X_y=True)
+# X,y = datasets.load_diabetes(return_X_y=True)

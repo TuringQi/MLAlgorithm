@@ -33,6 +33,7 @@ clf = SVC(C=C, kernel=kernel, gamma=gamma, shrinking=True, probability=True)
 clf.fit(X_train, y_train)
 # 预测测试集
 predictions = clf.predict(X_test)
+print(predictions[0])
 # 计算准确度
 Accuracy_score = accuracy_score(y_test, predictions)
 print('SVM Accuracy_score:', Accuracy_score)

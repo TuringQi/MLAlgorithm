@@ -29,13 +29,32 @@ def miss_bar(data, title):
     f.set_title(title)
     plt.show()
 
+# 普通条形图
+def bar(data):
+
+    fig, ax = plt.subplots()
+
+    fruits = ['apple', 'blueberry', 'cherry', 'orange']
+    counts = [40, 100, 30, 55]
+    bar_labels = ['red', 'blue', '_red', 'orange']
+    bar_colors = ['tab:red', 'tab:blue', 'tab:red', 'tab:orange']
+
+    ax.bar(fruits, counts, label=bar_labels, color=bar_colors)
+
+    ax.set_ylabel('fruit supply')
+    ax.set_title('Fruit supply by kind and color')
+    ax.legend(title='Fruit color')
+
+    plt.show()
+
 data = pd.read_excel(
     io='..//Resources//identity_new1.xlsx',
-    sheet_name=1,
+    sheet_name=0,
     header=0,  # 指定行索引为表头
     # skiprows=1,
     # skipcols=0
     #index_col=0
 )
 data = pd.DataFrame(data)
-miss_bar(data,'identity_new1_bar')
+bar(data)
+# miss_bar(data,'identity_new1_bar')
